@@ -5,7 +5,7 @@
 |[01](https://adventofcode.com/2020/day/1)|Report Repair|[py](/challenges/01)|
 |[02](https://adventofcode.com/2020/day/2)|Password Philosophy|[py](/challenges/02)|
 |[03](https://adventofcode.com/2020/day/3)|Toboggan Trajectory|[py](/challenges/03)|
-|[04](https://adventofcode.com/2020/day/4)|-|-|
+|[04](https://adventofcode.com/2020/day/4)|Passport Processing|[py](/challenges/04)|
 |[05](https://adventofcode.com/2020/day/5)|-|-|
 |[06](https://adventofcode.com/2020/day/6)|-|-|
 |[07](https://adventofcode.com/2020/day/7)|-|-|
