@@ -4,7 +4,6 @@ import datetime
 def download_input ():
     year, day = datetime.datetime.today().strftime('%Y-%#d').split('-')
     session = open('.session', 'r').readline()
-    print(session)
     cmd = f'curl https://adventofcode.com/{year}/day/{day}/input --cookie "session={session}"'
     output = subprocess.check_output(cmd, shell=True)
 

@@ -9,10 +9,10 @@ def part1 (m):
     ymax = len(m[x])
     trees = 0
 
-    while x < xmax: 
+    while x < xmax:
             x += 1
             y += 3
-            
+
             if (m[x][y % ymax] == '#'):
                 trees += 1
 
@@ -30,12 +30,12 @@ def part2 (m):
         ymax = len(m[x])
 
         while x < xmax:
-            x += dx 
+            x += dx
             y += dy
 
             if (m[x][y % ymax] == '#'):
                 trees += 1
-        
+
         total *= trees
 
     return total
@@ -48,7 +48,6 @@ def main ():
         mp.append(list(l))
 
     res = [part1(mp), part2(mp)]
-
     print(f"Part 1 = {res[0]}\nPart 2 = {res[1]}")
 
 main()
