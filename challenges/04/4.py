@@ -9,13 +9,16 @@ eye_colors = ['amb', 'blu', 'brn', 'gry', 'grn', 'hzl', 'oth']
 def validate_infos (passport):
     validation_infos = True
 
+    byr = passport['byr']
+    iyr = passport['iyr']
+    eyr = passport['eyr']
     hgt = passport['hgt']
     hcl = passport['hcl']
     ecl = passport['ecl']
     pid = passport['pid']
 
     # date check
-    if (not number_is_between(1920, 2002, passport['byr'])) or (not number_is_between(2010, 2020, passport['iyr'])) or (not number_is_between(2020, 2030, passport['eyr'])):
+    if (not number_is_between(1920, 2002, byr)) or (not number_is_between(2010, 2020, iyr)) or (not number_is_between(2020, 2030, eyr)):
         validation_infos = False
 
     # regex check
@@ -71,10 +74,10 @@ def part2 (fb):
         l = l.strip()
 
         if l:
-            w = l.split()
-            for wd in w:
-                k,v = wd.split(':')
-                passport[k] = v
+            infos = l.split()
+            for info in infos:
+                category, value = info.split(':')
+                passport[category] = value
         else:
             all_infos = all([fd in passport for fd in fields])
 
@@ -83,7 +86,7 @@ def part2 (fb):
 
             # reset passport
             passport = {}
-            
+
     t += validate_infos(passport)
 
     return t
