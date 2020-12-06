@@ -14,9 +14,8 @@ def part1 (fa):
             count += len(set(questions))
             questions = ''
 
-    # last part
-    u = set(questions)
-    count += len(u)
+    # add the value of the bottom file group
+    count += len(set(questions))
 
     return count
 
@@ -32,9 +31,8 @@ def part2 (fb):
                 count += len(list(set.intersection(*map(set, questions))))
                 questions = []
 
-        # last part
-        u = list(set.intersection(*map(set, questions)))
-        count += len(u)
+        # add the value of the bottom file group
+        count += len(list(set.intersection(*map(set, questions))))
 
         return count
 
