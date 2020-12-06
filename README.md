@@ -7,7 +7,7 @@
 |[03](https://adventofcode.com/2020/day/3)|Toboggan Trajectory|[py](/challenges/03)|
 |[04](https://adventofcode.com/2020/day/4)|Passport Processing|[py](/challenges/04)|
 |[05](https://adventofcode.com/2020/day/5)|Binary Boarding|[py](/challenges/05)|
-|[06](https://adventofcode.com/2020/day/6)|-|-|
+|[06](https://adventofcode.com/2020/day/6)|Custom Customs|[py](/challenges/06)|
 |[07](https://adventofcode.com/2020/day/7)|-|-|
 |[08](https://adventofcode.com/2020/day/8)|-|-|
 |[09](https://adventofcode.com/2020/day/9)|-|-|

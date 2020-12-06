@@ -5,6 +5,7 @@ import aoc
 def part1 (code):
     row = code[:-3]
     col = code[-3:]
+    
     range_row = [0, 127]
     for b in row:
         if (b == 'F'):
@@ -30,8 +31,8 @@ def part2 (ids):
     ids = sorted(ids)
     last = ids[0]
     i = 0
+
     for id in range(1, len(ids)):
-        col = id - 5
         row = id / 8
         if (row != 0 and row != 127):
             if (last + 1 != ids[id]):
