@@ -7,12 +7,10 @@ def run2(cmds):
     i = 0
 
     while True:
-        if(i == len(cmds)):
+        if (i == len(cmds)) or cmds[i][2]:
             break
         elif not cmds[i][2]:
             cmds[i][2] = True
-        else:
-            break
 
         if (cmds[i][0] == 'nop'):
             i += 1
@@ -33,7 +31,6 @@ def run (commands):
             return acc
         else:
             commands[i][2] = True
-
 
         if (commands[i][0] == 'nop'):
             i = (i + 1) % len(commands)
@@ -82,7 +79,6 @@ def part2 (fb):
 
 def main ():
     f = aoc.read_file('08')
-    test = aoc.read_file('09')
 
     res = [part1(f), part2(f)]
     print(f"Part 1 = {res[0]}\nPart 2 = {res[1]}")
