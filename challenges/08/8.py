@@ -6,11 +6,9 @@ def run2(cmds):
     acc = 0
     i = 0
 
-    while True:
-        if (i == len(cmds)) or cmds[i][2]:
-            break
-        elif not cmds[i][2]:
-            cmds[i][2] = True
+    while (i != len(cmds)) and not cmds[i][2]:
+
+        cmds[i][2] = True
 
         if (cmds[i][0] == 'nop'):
             i += 1
@@ -26,11 +24,8 @@ def run (commands):
     acc = 0
     i = 0
 
-    while True:
-        if commands[i][2]:
-            return acc
-        else:
-            commands[i][2] = True
+    while not commands[i][2]:
+        commands[i][2] = True
 
         if (commands[i][0] == 'nop'):
             i = (i + 1) % len(commands)
@@ -39,6 +34,8 @@ def run (commands):
             i = (i + 1) % len(commands)
         elif (commands[i][0] == 'jmp'):
             i = (i + commands[i][1]) % len(commands)
+
+    return acc
 
 def getCommands (fc):
     commands = []
