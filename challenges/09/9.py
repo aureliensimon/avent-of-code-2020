@@ -1,17 +1,15 @@
 import sys
+import time
 sys.path.insert(1, 'util')
 import aoc
 
 def getNumbers (fc):
     return [int(n) for n in fc]
 
-def part1 (fa, maxPreamble):
+def part1 (numbers, maxPreamble):
     nb = 0
     preamble = []
-    numbers = []
     sumpairs = []
-
-    numbers = getNumbers(fa)
 
     lower = 0
     upper = maxPreamble
@@ -30,12 +28,9 @@ def part1 (fa, maxPreamble):
         upper += 1
         sumpairs = []
 
-def part2 (fb, maxPreamble):
-    p1 = part1(fb, maxPreamble)
-    numbers = []
+def part2 (numbers, maxPreamble):
+    p1 = part1(numbers, maxPreamble)
     contiguous = []
-
-    numbers = getNumbers(fb)
 
     for i in range(len(numbers)):
         j = i + 1
@@ -52,8 +47,11 @@ def part2 (fb, maxPreamble):
 def main ():
     f = aoc.read_file('09')
     preambleSize = 25
+    numbers = getNumbers(f)
 
-    res = [part1(f, preambleSize), part2(f, preambleSize)]
+    res = [part1(numbers, preambleSize), part2(numbers, preambleSize)]
     print(f"Part 1 = {res[0]}\nPart 2 = {res[1]}")
+    print("%s ms" % round((time.time() - start_time) * 1000))
 
+start_time = time.time()
 main()

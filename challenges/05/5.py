@@ -1,11 +1,12 @@
 import sys
+import time
 sys.path.insert(1, 'util')
 import aoc
 
 def part1 (code):
     row = code[:-3]
     col = code[-3:]
-    
+
     range_row = [0, 127]
     for b in row:
         if (b == 'F'):
@@ -52,5 +53,7 @@ def main ():
 
     res = [max(ids), part2(ids)]
     print(f"Part 1 = {res[0]}\nPart 2 = {res[1]}")
+    print("%s ms" % round((time.time() - start_time) * 1000))
 
+start_time = time.time()
 main()

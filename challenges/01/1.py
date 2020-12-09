@@ -1,4 +1,5 @@
 import sys
+import time
 sys.path.insert(1, 'util')
 import aoc
 
@@ -22,5 +23,7 @@ def main ():
     res = [part1(a, 2020), part2(a, 2020)]
 
     print(f"Part 1 = {res[0]}\nPart 2 = {res[1]}")
+    print("%s ms" % round((time.time() - start_time) * 1000))
 
+start_time = time.time()
 main()
