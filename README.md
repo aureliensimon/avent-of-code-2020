@@ -11,7 +11,7 @@
 |[07](https://adventofcode.com/2020/day/7)|Handy Haversacks|[py](/challenges/07)|
 |[08](https://adventofcode.com/2020/day/8)|Handheld Halting|[py](/challenges/08)|
 |[09](https://adventofcode.com/2020/day/9)|Encoding Error|[py](/challenges/09)|
-|[10](https://adventofcode.com/2020/day/10)|-|-|
+|[10](https://adventofcode.com/2020/day/10)|Adapter Array|[py](/challenges/10)|
 |[11](https://adventofcode.com/2020/day/11)|-|-|
 |[12](https://adventofcode.com/2020/day/12)|-|-|
 |[13](https://adventofcode.com/2020/day/13)|-|-|
