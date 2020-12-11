@@ -12,7 +12,7 @@
 |[08](https://adventofcode.com/2020/day/8)|Handheld Halting|[py](/challenges/08)|
 |[09](https://adventofcode.com/2020/day/9)|Encoding Error|[py](/challenges/09)|
 |[10](https://adventofcode.com/2020/day/10)|Adapter Array|[py](/challenges/10)|
-|[11](https://adventofcode.com/2020/day/11)|-|-|
+|[11](https://adventofcode.com/2020/day/11)|Seating System|[py](/challenges/11)|
 |[12](https://adventofcode.com/2020/day/12)|-|-|
 |[13](https://adventofcode.com/2020/day/13)|-|-|
 |[14](https://adventofcode.com/2020/day/14)|-|-|
