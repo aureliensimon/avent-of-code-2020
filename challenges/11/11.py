@@ -13,28 +13,28 @@ def createMaps (fc):
     return map, mapCopy
 
 def getNeighbours (i, j, m, n):
-    neighours = []
+    neighbours = []
     if (i > 0):
-        neighours.append((i - 1, j))
+        neighbours.append((i - 1, j))
         if (j > 0):
-            neighours.append((i - 1, j - 1))
+            neighbours.append((i - 1, j - 1))
         if (j + 1 < n):
-            neighours.append((i - 1, j + 1))
+            neighbours.append((i - 1, j + 1))
 
     if (i + 1 < m):
-        neighours.append((i + 1, j))
+        neighbours.append((i + 1, j))
         if (j > 0):
-            neighours.append((i + 1, j - 1))
+            neighbours.append((i + 1, j - 1))
         if (j + 1 < n):
-            neighours.append((i + 1, j + 1))
+            neighbours.append((i + 1, j + 1))
 
     if (j > 0):
-        neighours.append((i, j - 1))
+        neighbours.append((i, j - 1))
 
     if (j + 1 < n):
-        neighours.append((i, j + 1))
+        neighbours.append((i, j + 1))
 
-    return neighours
+    return neighbours
 
 def findVisible (map, x, y, dx, dy):
     point = map[x][y]
@@ -59,15 +59,15 @@ def part1 (fa):
         for i in range(len(map)):
             for j in range(len(map[i])):
                 adj = getNeighbours(i, j, len(map), len(map[i]))
-                nbs = 0
+                occupiedSeats = 0
                 for m, n in adj:
                     if (map[m][n] == '#'):
-                        nbs += 1
+                        occupiedSeats += 1
 
-                if (map[i][j] == 'L') and not nbs:
+                if (map[i][j] == 'L') and not occupiedSeats:
                     mp[i][j] = '#'
                     moving = True
-                elif (map[i][j] == '#') and nbs >= 4:
+                elif (map[i][j] == '#') and occupiedSeats >= 4:
                     mp[i][j] = 'L'
                     moving = True
 
@@ -85,16 +85,16 @@ def part2 (fb):
         for i in range(len(map)):
             for j in range(len(map[i])):
                 adj = getNeighbours(i, j, len(map), len(map[i]))
-                nbs = 0
+                occupiedSeats = 0
                 for m, n in adj:
                     x, y = findVisible(map, m, n, m - i, n - j)
                     if (map[x][y] == '#'):
-                        nbs += 1
+                        occupiedSeats += 1
 
-                if (map[i][j] == 'L') and not nbs:
+                if (map[i][j] == 'L') and not occupiedSeats:
                     mp[i][j] = '#'
                     moving = True
-                elif (map[i][j] == '#') and nbs >= 5:
+                elif (map[i][j] == '#') and occupiedSeats >= 5:
                     mp[i][j] = 'L'
                     moving = True
 
