@@ -105,7 +105,6 @@ def part2 (fb):
 
 def main ():
     f = aoc.read_file('11')
-    tc = aoc.read_file('test')
 
     res = [part1(f), part2(f)]
     print(f"Part 1 = {res[0]}\nPart 2 = {res[1]}")
