@@ -57,9 +57,8 @@ def part2 (fb):
         elif (direction == 'W'):
             waypoint[0] -= units
         elif (direction == 'F'):
-            for i in range(units):
-                distance[0] += waypoint[0]
-                distance[1] += waypoint[1]
+                distance[0] += waypoint[0] * units
+                distance[1] += waypoint[1] * units
         elif (direction == 'L'):
             for i in range(int(units / 90)):
                 tmp = -waypoint[1]
