@@ -37,7 +37,8 @@ def part2 (fb):
             adress = int(re.findall("\[([0-9]*?)\]", l)[0])
             value = int(l.split()[2])
 
-            adressbin = ('0' * (36 - len(str(bin(adress))[2:]))) + str(bin(adress))[2:]
+            adressbin = str(bin(adress))[2:]
+            adressbin = ('0' * (36 - len(adressbin))) + adressbin
 
             for i, c in enumerate(adressbin):
                 if (mask[i] != '0'):
