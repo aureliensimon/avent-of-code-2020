@@ -16,7 +16,7 @@
 |[12](https://adventofcode.com/2020/day/12)|Rain Risk|[py](/challenges/12)|
 |[13](https://adventofcode.com/2020/day/13)|Shuttle Search|[py](/challenges/13)|
 |[14](https://adventofcode.com/2020/day/14)|Docking Data|[py](/challenges/14)|
-|[15](https://adventofcode.com/2020/day/15)|-|-|
+|[15](https://adventofcode.com/2020/day/15)|Rambunctious Recitation|[py](/challenges/15)|
 |[16](https://adventofcode.com/2020/day/16)|-|-|
 |[17](https://adventofcode.com/2020/day/17)|-|-|
 |[18](https://adventofcode.com/2020/day/18)|-|-|
