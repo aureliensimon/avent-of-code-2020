@@ -34,10 +34,9 @@ def part2 (nbs):
 
         while len(spokenNumbers) != 30000000:
             lastSpoken = spokenNumbers[-1]
-            
+
             if lastSpoken in lastSeen:
-                lastIndex = lastSeen.get(lastSpoken)
-                spokenNumbers.append(len(spokenNumbers) - lastIndex - 1)
+                spokenNumbers.append(len(spokenNumbers) - lastSeen[lastSpoken] - 1)
             else:
                 spokenNumbers.append(0)
 
